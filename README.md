@@ -22,3 +22,6 @@
 - Advanced Configuration -> Command 输入 `./vnts --port 80 --web-port 88 --username username --password password`
 - 等待十分钟域名生效，后续可以使用 vnt客户端可以使用  wss://域名 连接使用 or ws://域名 连接使用
 - 可以fork本仓库，因vnt支持客户端转发，所以可以用github action作为转发非NAT4客户端的流量，降低服务端的流量以及cpu等
+
+## 使用cloudflare tunel + 域名 NAT4下也能部署vnts服务端
+- 后面有空再补充方法

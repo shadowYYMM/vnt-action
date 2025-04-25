@@ -8,7 +8,7 @@ on:
           required: false
           default: 'false'
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0,6,12,18 * * *'
 
 
 jobs:
@@ -30,31 +30,7 @@ jobs:
       run: |
         chmod +x diy.sh
         bash diy.sh
-    - name: 运行0.sh
+    - name: 运行run.sh
       run: |
-        chmod +x 0.sh
-        bash 0.sh
-    - name: wait
-      run: |
-        echo "等待响应"
-        sleep 60
-    - name: 运行6.sh
-      run: |
-        chmod +x 6.sh
-        bash 6.sh
-    - name: wait
-      run: |
-        echo "等待响应"
-        sleep 60
-    - name: 运行12.sh
-      run: |
-        chmod +x 12.sh
-        bash 12.sh
-    - name: wait
-      run: |
-        echo "等待响应"
-        sleep 60
-    - name: 运行18.sh
-      run: |
-        chmod +x 18.sh
-        bash 18.sh
+        chmod +x run.sh
+        bash run.sh

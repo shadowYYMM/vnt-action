@@ -29,7 +29,8 @@ jobs:
         chmod +x diy.sh
         bash diy.sh
     - name: 运行0.sh
-      env: COMMAND: ${{ secrets.COMMAND }}
+      env: 
+        COMMAND: ${{ secrets.COMMAND }}
       run: |
         chmod +x 0.sh
         bash 0.sh
@@ -38,7 +39,8 @@ jobs:
         echo "等待响应"
         sleep 60
     - name: 运行6.sh
-      env: COMMAND: ${{ secrets.COMMAND }}
+      env: 
+        COMMAND: ${{ secrets.COMMAND }}
       run: |
         chmod +x 6.sh
         bash 6.sh
@@ -47,7 +49,8 @@ jobs:
         echo "等待响应"
         sleep 60
     - name: 运行12.sh
-      env: COMMAND: ${{ secrets.COMMAND }}
+      env: 
+        COMMAND: ${{ secrets.COMMAND }}
       run: |
         chmod +x 12.sh
         bash 12.sh
@@ -56,7 +59,8 @@ jobs:
         echo "等待响应"
         sleep 60
     - name: 运行18.sh
-      env: COMMAND: ${{ secrets.COMMAND }}
+      env:
+        COMMAND: ${{ secrets.COMMAND }}
       run: |
         chmod +x 18.sh
         bash 18.sh

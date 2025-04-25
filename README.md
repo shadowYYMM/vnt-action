@@ -1,10 +1,15 @@
 # vnt-action
 ## 为什么建立这个仓库
 - 因为vnt组网支持客户端转发去中心化，借助github p2p进行数据转发
+## 感谢先说
+- vnt大佬github地址： https://github.com/vnt-dev/vnt
+- 官方地址： https://rustvnt.com/
+- op插件： https://github.com/lmq8267/luci-app-vnt
+- docker镜像： https://github.com/lmq8267/vnt , https://github.com/lmq8267/vnts
 ## 设置
 - 在github当前仓库下的Settings - Security-secrets and variables - Repository secrets - 新建
   `'COMMAND' '-k 你的token --ip 需要设置的IP -d gitaction -n gitaction -s vnts的服务端地址 --no-proxy --disable-stats'`
-## 使用 claw cloud 免费部署vnts服务端，0成本，域名都不需要，只需要超过6个月的github账号登录即可
+## 使用 claw cloud 免费部署vnts服务端，0成本，域名都不需要
 - https://console.run.claw.cloud/signin?link=RG2YLEXOCZ6P
 - 使用超过6个月的github账号登录，每个月送5美元用于docker服务搭建，首次5美元需要两到三小时才能到账，后续每个月送5美元
 - 选择日本地区创建

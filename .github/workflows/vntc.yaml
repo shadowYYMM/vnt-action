@@ -1,0 +1,62 @@
+name:  vntc-action
+
+on: 
+  workflow_dispatch:
+    inputs:
+        ssh:
+          description: 'SSH connection to Actions'
+          required: false
+          default: 'false'
+  schedule:
+    - cron: '0 0 * * *'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    
+    - name: 检查项目分支
+      uses: actions/checkout@main
+
+    - name: SSH connection to Actions
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh != 'false') || contains(github.event.action, 'ssh')
+        
+    - name: 运行diy.sh
+      run: |
+        chmod +x diy.sh
+        bash diy.sh
+    - name: 运行0.sh
+      env: COMMAND: ${{ secrets.COMMAND }}
+      run: |
+        chmod +x 0.sh
+        bash 0.sh
+    - name: wait
+      run: |
+        echo "等待响应"
+        sleep 60
+    - name: 运行6.sh
+      env: COMMAND: ${{ secrets.COMMAND }}
+      run: |
+        chmod +x 6.sh
+        bash 6.sh
+    - name: wait
+      run: |
+        echo "等待响应"
+        sleep 60
+    - name: 运行12.sh
+      env: COMMAND: ${{ secrets.COMMAND }}
+      run: |
+        chmod +x 12.sh
+        bash 12.sh
+    - name: wait
+      run: |
+        echo "等待响应"
+        sleep 60
+    - name: 运行18.sh
+      env: COMMAND: ${{ secrets.COMMAND }}
+      run: |
+        chmod +x 18.sh
+        bash 18.sh

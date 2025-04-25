@@ -7,7 +7,7 @@ current_hour=$(date +%H)
 # 检查是否在 18:00 到 00:00 之间
 if [ "$current_hour" -ge 6 ] && [ "$current_hour" -lt 12 ]; then
     # 计算到下一个 0 点的时间
-    ./vnt-cli ${COMMAND} &
+    ./vnt-cli ${COMMAND} >> /dev/null &
     current_time=$(date +%s)
     midnight=$(date -d "12:00" +%s)
     wait_time=$((midnight - current_time - 10))

@@ -1,6 +1,7 @@
 # vnt-action
 ## 为什么建立这个仓库
-- 因为vnt组网支持客户端转发去中心化，借助github p2p进行数据转发
+- 因为vnt组网支持客户端转发去中心化，借助github p2p进行数据转发，当组网设备全是NAT4建议fork
+![image](https://github.com/user-attachments/assets/c3b7a5bf-a2a5-4b3e-b0e1-9cc7a6deb607)
 ## 感谢先说
 - vnt大佬github地址： https://github.com/vnt-dev/vnt
 - 官方地址： https://rustvnt.com/

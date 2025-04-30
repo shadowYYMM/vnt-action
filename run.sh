@@ -22,7 +22,7 @@ if [ "$current_hour" -ge 6 ] && [ "$current_hour" -lt 12 ]; then
     midnight=$(date -d "11:59" +%s)
     wait_time=$((midnight - current_time - 10))
 
-    echo "当前时间是 $(date +'%H:%M:%S')，将在 6 点退出，等待 $wait_time 秒..."
+    echo "当前时间是 $(date +'%H:%M:%S')，将在 12 点退出，等待 $wait_time 秒..."
     sleep $wait_time
     echo "到达 12 点，程序退出。"
 fi
@@ -34,7 +34,7 @@ if [ "$current_hour" -ge 12 ] && [ "$current_hour" -lt 18 ]; then
     midnight=$(date -d "17:59" +%s)
     wait_time=$((midnight - current_time - 10))
 
-    echo "当前时间是 $(date +'%H:%M:%S')，将在 6 点退出，等待 $wait_time 秒..."
+    echo "当前时间是 $(date +'%H:%M:%S')，将在 18 点退出，等待 $wait_time 秒..."
     sleep $wait_time
     echo "到达 18 点，程序退出。"
 fi

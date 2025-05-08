@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 设置时区为上海时间（Asia/Shanghai）
-export TZ='Asia/Shanghai'
+# # 设置时区为上海时间（Asia/Shanghai）
+# export TZ='Asia/Shanghai'
 
 # 获取当前小时
 current_hour=$(date +%H)
